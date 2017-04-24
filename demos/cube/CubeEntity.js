@@ -1,7 +1,7 @@
 
-import DECS from 'decs';
+import { PhysicalEntity } from '../../';
 
-const CubeEntity = DECS.Entity.createClass({
+const CubeEntity = PhysicalEntity.createClass({
 	shapes: {
 		box: {
 			type: 'box',
@@ -11,9 +11,10 @@ const CubeEntity = DECS.Entity.createClass({
 				z: 1,
 			}
 		}
+	},
+	view: {
+		color: 0xffff00
 	}
 });
-
-console.info('test 2', new CubeEntity());
 
 export default CubeEntity;

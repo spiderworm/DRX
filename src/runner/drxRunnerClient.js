@@ -1,9 +1,12 @@
 
+import Client from '../game/client/Client.js';
+import Game from '../game/DRxGame.js'
 import target from 'TARGET_PATH';
 
 class DRXRunnerClient {
 	constructor() {
-		console.info(target);
+		window.game = new Game(target);
+		window.client = new Client(window.game);
 	}
 }
 
